@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <PackageType>Template</PackageType>
+    <PackageVersion>1.0</PackageVersion>
+    <PackageId>PhosphorusNET.Templates</PackageId>
+    <Title>PhosphorusNET Templates</Title>
+    <Authors>UltraWelfare</Authors>
+    <Description>Templates to use when creating an application for PhosphorusNET.</Description>
+    <PackageTags>dotnet-new;templates</PackageTags>
+    <TargetFramework>net9.0-windows</TargetFramework>
+
+    <IncludeContentInPack>true</IncludeContentInPack>
+    <IncludeBuildOutput>false</IncludeBuildOutput>
+    <ContentTargetFolders>content</ContentTargetFolders>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="WpfApp\**\*" Exclude="WpfApp\**\bin\**;WpfApp\**\obj\**" />
+    <Compile Remove="**\*" />
+  </ItemGroup>
+
+</Project>

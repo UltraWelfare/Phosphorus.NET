@@ -12,10 +12,6 @@
     <PackageReference Include="Microsoft.Web.WebView2" Version="1.0.2903.40" />
     <PackageReference Include="PhosphorusNET.Ipc" Version="0.0.1" />
   </ItemGroup>
-  
-  <ItemGroup>
-    <Folder Include="wwwroot\" />
-  </ItemGroup>
 
   <ItemGroup>
     <WwwrootFiles Include="wwwroot\dist\**\*.*" />
