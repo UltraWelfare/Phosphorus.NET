@@ -1,0 +1,14 @@
+﻿{
+  "$schema": "http://json.schemastore.org/template",
+  "author": "UltraWelfare",
+  "classifications": [ "Common", "Wpf" ],
+  "identity": "PhosphorusNET.Templates.Wpf",
+  "name": "Phosphorus.NET Template for WPF Projects",
+  "shortName": "phosphorus.net-wpf",
+  "sourceName":"WpfApp",
+  "placeholderFilename": ".keep",
+  "tags": {
+    "language": "C#",
+    "type": "project"
+  }
+}
