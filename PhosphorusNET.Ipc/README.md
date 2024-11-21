@@ -128,7 +128,39 @@ So far what is allowed is:
 * There's currently no support to invoke Generic methods.
 
 ## Quick Start
+You can either take a look at the [manual-installation.md](docs/manual-installation.md) or use the Wpf template to quickly get started:
 
+Use the dotnet CLI to create a new project using the template:
+```powershell
+dotnet new phosphorus.net-wpf -n YourAppName -o YourAppName
+```
+
+The template comes without a web-app pre-installed. Feel free to copy your existing web-app or create a new one for example using vite:
+```powershell
+cd wwwroot
+npm create vite@latest .
+```
+Then follow the prompts.
+
+After your web-app is created and you've already done an `npm install` to install all the packages, you have to install the PhosphorusNET IPC javascript library:
+```powershell
+npm install @ultrawelfare/phosphorus.net-ipc
+```
+
+Next you'll have to import the package in your web-app entry-point. Depending on which framework you use it will be different, for example for React projects it's either the
+main.jsx or main.tsx file:
+```js
+import '@ultrawelfare/phosphorus.net-ipc';
+```
+
+That's it!
+
+The Wpf template assumes that when your configuration is set to "Debug" you will have the vite server running at `localhost:5173` (using `npm run dev`).
+You can change this behaviour in `MainWindow.xaml.cs` inside the `CoreWebView2InitializationCompleted` event.
+
+Likewise for either making a `Release` build or publishing a `Release` build, it assumes that you've built your vite project (using `npm run build`)
+and the output files are at `wwwroot/dist` which will be copied to `wwwroot/` on the published/built folder.
+To change this, you can edit the C# `.csproj` file and change the     `<WwwrootFiles Include="wwwroot\dist\**\*.*" />` to wherever your built web-app will be.
 ## Manual Installation
 
 Refer to the [manual-installation.md](docs/manual-installation.md) for a step-by-step guide on how to install the
