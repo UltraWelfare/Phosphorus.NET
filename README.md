@@ -137,6 +137,7 @@ dotnet new phosphorus.net-wpf -n YourAppName -o YourAppName
 
 The template comes without a web-app pre-installed. Feel free to copy your existing web-app or create a new one for example using vite:
 ```powershell
+mkdir wwwroot
 cd wwwroot
 npm create vite@latest .
 ```
