@@ -132,6 +132,9 @@ You can either take a look at the [manual-installation.md](docs/manual-installat
 
 Use the dotnet CLI to create a new project using the template:
 ```powershell
+dotnet new install PhosphorusNET.Templates
+(if you're running .NET6 you'll need to run this instead: "dotnet new --install PhosphorusNET.Templates")
+
 dotnet new phosphorus.net-wpf -n YourAppName -o YourAppName
 ```
 
