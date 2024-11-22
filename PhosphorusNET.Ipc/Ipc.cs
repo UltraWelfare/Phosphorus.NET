@@ -1,7 +1,4 @@
-﻿using System;
-using System.Linq;
-using System.Text.Json;
-using System.Threading.Tasks;
+﻿using System.Text.Json;
 using PhosphorusNET.Ipc.Messages;
 using Message = PhosphorusNET.Ipc.Messages.Message;
 using WebView2Wpf = Microsoft.Web.WebView2.Wpf.WebView2;
@@ -69,7 +66,7 @@ public static class Ipc
     /// </returns>
     /// <exception cref="InvalidOperationException">the uuid field in the json is null</exception>
     /// <exception cref="JsonException">the json string cannot be parsed</exception>
-    private static async Task<Message> Invoke(IpcContainer ipcContainer, string json)
+    public static async Task<Message> Invoke(IpcContainer ipcContainer, string json)
     {
         var jsonDocument = JsonDocument.Parse(json);
         var uuid = jsonDocument.RootElement.GetProperty("uuid").GetString();

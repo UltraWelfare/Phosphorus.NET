@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net.Http;
-using System.Reflection;
+﻿using System.Reflection;
 using PhosphorusNET.Ipc.Common;
 
 namespace PhosphorusNET.Ipc;
@@ -12,7 +8,8 @@ public abstract class IpcContainer
     private readonly Dictionary<string, IpcInstance> _instanceCache = new();
     public List<IpcInstance> Instances { get; } = new();
 
-    public void RegisterHttp(string instanceName = "http", HttpClient? httpClient = null) => Register(instanceName, new Http(httpClient));
+    public void RegisterHttp(string instanceName = "http", HttpClient? httpClient = null) =>
+        Register(instanceName, new Http(httpClient));
 
     public IpcContainer Register(string instanceName, object target)
     {
@@ -44,7 +41,6 @@ public abstract class IpcContainer
 
         return this;
     }
-
 
     public IpcInstance GetInstance(string instanceName)
     {

@@ -1,6 +1,6 @@
 ﻿namespace PhosphorusNET.Ipc.Messages;
 
-internal enum MessageType
+public enum MessageType
 {
     InvokationRequest = 0,
 }

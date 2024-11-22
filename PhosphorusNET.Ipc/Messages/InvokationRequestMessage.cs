@@ -1,6 +1,6 @@
 ﻿namespace PhosphorusNET.Ipc.Messages;
 
-internal class InvokationRequestMessage : Message
+public class InvokationRequestMessage : Message
 {
     public object? Data { get; set; }
 

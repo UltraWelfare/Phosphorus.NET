@@ -1,6 +1,6 @@
 ﻿namespace PhosphorusNET.Ipc.Messages;
 
-internal class Message
+public class Message
 {
     public string Uuid { get; set; }
 
